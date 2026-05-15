@@ -25,10 +25,10 @@
     <nav id="navbar">
       <a href="#" class="logo">AURA.</a>
       <div class="nav-links">
-        <a href="#inicio">Inicio</a>
+        <a href="#">Inicio</a>
+        <a href="#drop" class="highlight-link">The Drop</a>
+        <a href="#essentials">Essentials</a>
         <a href="#beneficios">Beneficios</a>
-        <a href="#coleccion">Colección</a>
-        <a href="#nosotros">Nosotros</a>
       </div>
       <div class="cart-icon" onclick="toggleCart()">
         <i class="fas fa-shopping-bag"></i>
@@ -38,239 +38,224 @@
 
     <main>
       <!-- Hero Section -->
-      <header id="inicio">
+      <header id="inicio" class="animate-on-scroll">
         <div class="hero-container">
           <div class="hero-content">
-            <div class="hero-badge">Nueva Colección 2026</div>
-            <h1 class="hero-title">Eleva tu <span>estilo</span> diario.</h1>
+            <div class="hero-badge">Exclusive Drop 2026</div>
+            <h1 class="hero-title">Redefiniendo el <span>lujo</span> silencioso.</h1>
             <p class="hero-subtitle">
-              Camisetas premium diseñadas para el confort y creadas para
-              impresionar. Descubre el minimalismo en su máxima expresión.
+              Básicos atemporales con un corte arquitectónico. Eleva tu estilo diario con la estética retro minimalista que estabas buscando.
             </p>
-            <a href="#coleccion" class="btn btn-primary">
-              Ver Colección <i class="fas fa-arrow-right"></i>
+            <a href="#drop" class="btn btn-primary magnetic-btn">
+              Descubrir The Drop <i class="fas fa-arrow-right"></i>
             </a>
           </div>
           <div class="hero-image-container">
             <img
-              src="hero_fashion_tee.png"
-              alt="Fashion Tee"
+              src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=2000&auto=format&fit=crop"
+              alt="Aura Premium Fashion"
               class="hero-img"
             />
           </div>
         </div>
       </header>
 
-      <!-- Benefits Section (UL, LI) -->
-      <section class="benefits-section" id="beneficios">
-        <div class="section-header">
-          <h2 class="section-title">¿Por qué Aura?</h2>
-          <p class="section-subtitle">Lo que nos hace diferentes.</p>
-        </div>
-        <ul class="benefits-list">
-          <li>
-            <i
-              class="fas fa-leaf"
-              style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem"
-            ></i>
-            <h3>100% Algodón Orgánico</h3>
-            <p>Sostenibilidad en cada fibra.</p>
-          </li>
-          <li>
-            <i
-              class="fas fa-check-double"
-              style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem"
-            ></i>
-            <h3>Calidad Premium</h3>
-            <p>Resistencia y suavidad inigualable.</p>
-          </li>
-          <li>
-            <i
-              class="fas fa-shipping-fast"
-              style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem"
-            ></i>
-            <h3>Envío Global</h3>
-            <p>Llegamos a cualquier parte del mundo.</p>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Products Section -->
-      <section class="products-section" id="coleccion">
-        <div class="section-header">
-          <h2 class="section-title">Los Esenciales</h2>
+      <section class="products-section drop-section" id="drop">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">The Drop: Retro Minimal</h2>
           <p class="section-subtitle">
-            Nuestra selección cuidadosamente curada de camisetas para cada
-            ocasión. Calidad que puedes sentir en cada hilo.
+            Edición limitada. Siluetas oversize, cortes estructurados y una estética urbana impecable.
           </p>
         </div>
 
         <div class="products-grid">
-          <!-- Product 1 -->
-          <div class="product-card">
+          <!-- Drop Product 1: Extravagant Polo -->
+          <div class="product-card animate-on-scroll">
             <div class="product-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800"
-                alt="Camiseta Negra Básica"
-                class="product-image"
-              />
-              <button
-                class="add-to-cart-btn"
-                onclick="addToCart('Camiseta Onyx Essential', 29.99)"
-              >
-                <i class="fas fa-shopping-cart"></i> Añadir al Carrito
-              </button>
+              <img src="assets/images/drop_polo_beige_tee_1778827807720.png" alt="Extravagant Old Money Polo" class="product-image primary-img" id="img-polo-primary" />
+              <img src="assets/images/drop_polo_beige_model_1778827793310.png" alt="Model wearing Extravagant Polo" class="product-image secondary-img" id="img-polo-secondary" />
+              
+              <div class="color-swatches">
+                <div class="swatch" style="background-color: #d1bfae;" onclick="changeProductColor('img-polo-primary', 'img-polo-secondary', 'assets/images/drop_polo_beige_tee_1778827807720.png', 'assets/images/drop_polo_beige_model_1778827793310.png')" aria-label="Beige"></div>
+                <div class="swatch" style="background-color: #1a1a1a;" onclick="changeProductColor('img-polo-primary', 'img-polo-secondary', 'assets/images/drop_polo_black_tee_1778827866056.png', 'assets/images/drop_polo_black_model_v2_1778828710749.png')" aria-label="Negro"></div>
+              </div>
+
+              <div class="size-pills">
+                <button class="size-pill" data-tooltip="Pecho: 105cm&#xa;Largo: 72cm" onclick="addToCart('Extravagant Polo', 'S', 79.99)">S</button>
+                <button class="size-pill" data-tooltip="Pecho: 110cm&#xa;Largo: 74cm" onclick="addToCart('Extravagant Polo', 'M', 79.99)">M</button>
+                <button class="size-pill" data-tooltip="Pecho: 115cm&#xa;Largo: 76cm" onclick="addToCart('Extravagant Polo', 'L', 79.99)">L</button>
+                <button class="size-pill" data-tooltip="Pecho: 120cm&#xa;Largo: 78cm" onclick="addToCart('Extravagant Polo', 'XL', 79.99)">XL</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Exclusive Drop</div>
+              <h3 class="product-title">Old Money Polo</h3>
+              <div class="product-price"><strong>$79.99</strong></div>
+            </div>
+          </div>
+
+          <!-- Drop Product 2: Elegant Tee -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image-container">
+              <img src="assets/images/streetwear_elegant_tee_1778826142734.png" alt="Elegant Streetwear Tee" class="product-image primary-img" id="img-elegant-primary" />
+              <img src="assets/images/streetwear_elegant_model_1778826131795.png" alt="Model wearing Elegant Tee" class="product-image secondary-img" id="img-elegant-secondary" />
+              
+              <div class="color-swatches">
+                <div class="swatch" style="background-color: #a69586;" onclick="changeProductColor('img-elegant-primary', 'img-elegant-secondary', 'assets/images/streetwear_elegant_tee_1778826142734.png', 'assets/images/streetwear_elegant_model_1778826131795.png')" aria-label="Café"></div>
+                <div class="swatch" style="background-color: #f4f4f5;" onclick="changeProductColor('img-elegant-primary', 'img-elegant-secondary', 'assets/images/streetwear_elegant_tee_1778826142734.png', 'assets/images/drop_oversize_white_model_1778828723403.png', 'invert(1) hue-rotate(180deg) brightness(1.5)')" aria-label="Blanco"></div>
+              </div>
+
+              <div class="size-pills">
+                <button class="size-pill" data-tooltip="Pecho: 105cm&#xa;Largo: 72cm" onclick="addToCart('Elegant Oversize Tee', 'S', 59.99)">S</button>
+                <button class="size-pill" data-tooltip="Pecho: 110cm&#xa;Largo: 74cm" onclick="addToCart('Elegant Oversize Tee', 'M', 59.99)">M</button>
+                <button class="size-pill" data-tooltip="Pecho: 115cm&#xa;Largo: 76cm" onclick="addToCart('Elegant Oversize Tee', 'L', 59.99)">L</button>
+                <button class="size-pill" data-tooltip="Pecho: 120cm&#xa;Largo: 78cm" onclick="addToCart('Elegant Oversize Tee', 'XL', 59.99)">XL</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Exclusive Drop</div>
+              <h3 class="product-title">Elegant Oversize Tee</h3>
+              <div class="product-price"><strong>$59.99</strong></div>
+            </div>
+          </div>
+
+          <!-- Drop Product 3: Casual Retro Tee -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image-container">
+              <img src="assets/images/streetwear_casual_tee_1778826173676.png" alt="Casual Retro Tee" class="product-image primary-img" id="img-casual-primary" />
+              <img src="assets/images/streetwear_casual_model_1778826157523.png" alt="Model wearing Casual Tee" class="product-image secondary-img" id="img-casual-secondary" />
+              
+              <div class="color-swatches">
+                <div class="swatch" style="background-color: #f4f4f5;" onclick="changeProductColor('img-casual-primary', 'img-casual-secondary', 'assets/images/streetwear_casual_tee_1778826173676.png', 'assets/images/streetwear_casual_model_1778826157523.png')" aria-label="Blanco"></div>
+                <div class="swatch" style="background-color: #8c7a6b;" onclick="changeProductColor('img-casual-primary', 'img-casual-secondary', 'assets/images/streetwear_casual_tee_1778826173676.png', 'assets/images/drop_normal_brown_model_1778828736953.png', 'sepia(1) hue-rotate(330deg) saturate(1.5) brightness(0.8)')" aria-label="Café"></div>
+              </div>
+
+              <div class="size-pills">
+                <button class="size-pill" data-tooltip="Pecho: 105cm&#xa;Largo: 72cm" onclick="addToCart('Casual Retro Tee', 'S', 49.99)">S</button>
+                <button class="size-pill" data-tooltip="Pecho: 110cm&#xa;Largo: 74cm" onclick="addToCart('Casual Retro Tee', 'M', 49.99)">M</button>
+                <button class="size-pill" data-tooltip="Pecho: 115cm&#xa;Largo: 76cm" onclick="addToCart('Casual Retro Tee', 'L', 49.99)">L</button>
+                <button class="size-pill" data-tooltip="Pecho: 120cm&#xa;Largo: 78cm" onclick="addToCart('Casual Retro Tee', 'XL', 49.99)">XL</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Exclusive Drop</div>
+              <h3 class="product-title">Casual Retro Tee</h3>
+              <div class="product-price"><strong>$49.99</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Essentials Products Section -->
+      <section class="products-section" id="coleccion" style="background-color: var(--secondary);">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">The Essentials</h2>
+          <p class="section-subtitle">
+            Nuestra selección permanente. Calidad que puedes sentir en cada hilo, diseñadas para el uso diario.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Essential Product 1: Basic Polo -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image-container">
+              <img src="assets/images/essential_polo_navy_tee_1778827841905.png" alt="Navy Basic Polo" class="product-image primary-img" />
+              <img src="assets/images/essential_polo_navy_model_1778827822830.png" alt="Model wearing Navy Polo" class="product-image secondary-img" />
+              
+              <div class="size-pills">
+                <button class="size-pill" data-tooltip="Pecho: 105cm&#xa;Largo: 72cm" onclick="addToCart('Navy Basic Polo', 'S', 39.99)">S</button>
+                <button class="size-pill" data-tooltip="Pecho: 110cm&#xa;Largo: 74cm" onclick="addToCart('Navy Basic Polo', 'M', 39.99)">M</button>
+                <button class="size-pill" data-tooltip="Pecho: 115cm&#xa;Largo: 76cm" onclick="addToCart('Navy Basic Polo', 'L', 39.99)">L</button>
+                <button class="size-pill" data-tooltip="Pecho: 120cm&#xa;Largo: 78cm" onclick="addToCart('Navy Basic Polo', 'XL', 39.99)">XL</button>
+              </div>
             </div>
             <div class="product-info">
               <div class="product-category">Básicos</div>
-              <h3 class="product-title">Camiseta Onyx Essential</h3>
-              <div class="product-price"><strong>$29.99</strong></div>
-            </div>
-          </div>
-
-          <!-- Product 2 -->
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800"
-                alt="Camiseta Blanca"
-                class="product-image"
-              />
-              <button
-                class="add-to-cart-btn"
-                onclick="addToCart('Camiseta Cloud White', 29.99)"
-              >
-                <i class="fas fa-shopping-cart"></i> Añadir al Carrito
-              </button>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Básicos</div>
-              <h3 class="product-title">Camiseta Cloud White</h3>
-              <div class="product-price"><strong>$29.99</strong></div>
-            </div>
-          </div>
-
-          <!-- Otros productos omitidos para brevedad en el ReplacementChunk pero mantenidos en el archivo final -->
-          <!-- Product 3 -->
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&q=80&w=800"
-                alt="Camiseta Gráfica"
-                class="product-image"
-              />
-              <button
-                class="add-to-cart-btn"
-                onclick="addToCart('Camiseta Vintage Print', 34.99)"
-              >
-                <i class="fas fa-shopping-cart"></i> Añadir al Carrito
-              </button>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Urbano</div>
-              <h3 class="product-title">Camiseta Vintage Print</h3>
-              <div class="product-price"><strong>$34.99</strong></div>
-            </div>
-          </div>
-
-          <!-- Product 4 -->
-          <div class="product-card">
-            <div class="product-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=800"
-                alt="Camiseta Oversize"
-                class="product-image"
-              />
-              <button
-                class="add-to-cart-btn"
-                onclick="addToCart('Camiseta Sand Oversize', 39.99)"
-              >
-                <i class="fas fa-shopping-cart"></i> Añadir al Carrito
-              </button>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Oversize</div>
-              <h3 class="product-title">Camiseta Sand Oversize</h3>
+              <h3 class="product-title">Classic Navy Polo</h3>
               <div class="product-price"><strong>$39.99</strong></div>
             </div>
           </div>
+
+          <!-- Essential Product 2 -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image-container">
+              <img src="assets/images/essential_black_tee_1778826206038.png" alt="Camiseta Negra Básica" class="product-image primary-img" />
+              <img src="assets/images/essential_black_model_1778826193964.png" alt="Modelo con Camiseta Negra" class="product-image secondary-img" />
+              
+              <div class="size-pills">
+                <button class="size-pill" data-tooltip="Pecho: 105cm&#xa;Largo: 72cm" onclick="addToCart('Onyx Essential', 'S', 29.99)">S</button>
+                <button class="size-pill" data-tooltip="Pecho: 110cm&#xa;Largo: 74cm" onclick="addToCart('Onyx Essential', 'M', 29.99)">M</button>
+                <button class="size-pill" data-tooltip="Pecho: 115cm&#xa;Largo: 76cm" onclick="addToCart('Onyx Essential', 'L', 29.99)">L</button>
+                <button class="size-pill" data-tooltip="Pecho: 120cm&#xa;Largo: 78cm" onclick="addToCart('Onyx Essential', 'XL', 29.99)">XL</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Básicos</div>
+              <h3 class="product-title">Onyx Essential</h3>
+              <div class="product-price"><strong>$29.99</strong></div>
+            </div>
+          </div>
+
+          <!-- Essential Product 3 -->
+          <div class="product-card animate-on-scroll">
+            <div class="product-image-container">
+              <img src="assets/images/essential_white_tee_1778826226803.png" alt="Camiseta Blanca" class="product-image primary-img" />
+              <img src="assets/images/essential_white_model_1778826216298.png" alt="Modelo con Camiseta Blanca" class="product-image secondary-img" />
+              
+              <div class="size-pills">
+                <button class="size-pill" data-tooltip="Pecho: 105cm&#xa;Largo: 72cm" onclick="addToCart('Cloud White', 'S', 29.99)">S</button>
+                <button class="size-pill" data-tooltip="Pecho: 110cm&#xa;Largo: 74cm" onclick="addToCart('Cloud White', 'M', 29.99)">M</button>
+                <button class="size-pill" data-tooltip="Pecho: 115cm&#xa;Largo: 76cm" onclick="addToCart('Cloud White', 'L', 29.99)">L</button>
+                <button class="size-pill" data-tooltip="Pecho: 120cm&#xa;Largo: 78cm" onclick="addToCart('Cloud White', 'XL', 29.99)">XL</button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Básicos</div>
+              <h3 class="product-title">Cloud White</h3>
+              <div class="product-price"><strong>$29.99</strong></div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Sizing Table (TABLE) -->
-      <section class="sizing-section">
-        <div class="section-header">
-          <h2 class="section-title">Guía de Tallas</h2>
-          <p class="section-subtitle">Encuentra tu ajuste perfecto.</p>
+      <!-- Benefits Section -->
+      <section class="benefits-section" id="beneficios">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Ingeniería Textil</h2>
+          <p class="section-subtitle">No fabricamos simples camisetas, construimos básicos que resisten el paso del tiempo y las tendencias.</p>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Talla</th>
-              <th>Pecho (cm)</th>
-              <th>Largo (cm)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>S</td>
-              <td>90 - 95</td>
-              <td>70</td>
-            </tr>
-            <tr>
-              <td>M</td>
-              <td>96 - 101</td>
-              <td>72</td>
-            </tr>
-            <tr>
-              <td>L</td>
-              <td>102 - 107</td>
-              <td>74</td>
-            </tr>
-            <tr>
-              <td>XL</td>
-              <td>108 - 113</td>
-              <td>76</td>
-            </tr>
-          </tbody>
-        </table>
+        <ul class="benefits-list">
+          <li class="animate-on-scroll">
+            <i class="fas fa-layer-group" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem"></i>
+            <h3>Corte Arquitectónico</h3>
+            <p>Patrones diseñados milimétricamente para un ajuste oversize favorecedor que no pierde su estructura.</p>
+          </li>
+          <li class="animate-on-scroll" style="transition-delay: 100ms;">
+            <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem"></i>
+            <h3>Cero Deformación</h3>
+            <p>Algodón de alto gramaje pre-lavado. Di adiós a los cuellos dados de sí tras el primer lavado.</p>
+          </li>
+          <li class="animate-on-scroll" style="transition-delay: 200ms;">
+            <i class="fas fa-globe-americas" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem"></i>
+            <h3>Lujo Accesible</h3>
+            <p>Calidad de diseñador directamente a tu puerta, con envíos globales express sostenibles.</p>
+          </li>
+        </ul>
       </section>
 
-      <!-- Media Section (IFRAME) -->
-      <section class="media-section">
-        <div style="text-align: center">
-          <h3 style="margin-bottom: 1.5rem; font-size: 2rem">Visítanos</h3>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.142293761144!2d-73.98731968459391!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1ses!2ses!4v1625585562157!5m2!1ses!2ses"
-            height="400"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+
 
       <!-- Aside Section -->
-      <aside>
-        <h2>Únete al Club Aura</h2>
-        <p>
-          Recibe un 10% de descuento en tu primera compra y noticias exclusivas.
-        </p>
-        <div style="margin-top: 1.5rem">
+      <aside class="animate-on-scroll">
+        <h2>Únete a la Lista de Acceso</h2>
+        <p>Los drops exclusivos se agotan rápido. Asegura tu acceso temprano y un 15% off en tu primera compra.</p>
+        <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
           <input
             type="email"
-            placeholder="Tu email"
-            style="
-              padding: 0.8rem 1.5rem;
-              border-radius: 30px;
-              border: none;
-              width: 250px;
-            "
+            placeholder="Tu email..."
+            style="padding: 1rem 1.5rem; border-radius: 50px; border: none; width: 280px; font-size: 1rem; outline: none;"
           />
-          <button
-            class="btn btn-primary"
-            style="padding: 0.7rem 1.5rem; margin-left: 10px"
-          >
+          <button class="btn btn-primary magnetic-btn" style="padding: 1rem 2rem;">
             Suscribirse
           </button>
         </div>
@@ -280,90 +265,183 @@
     <!-- Footer -->
     <footer id="nosotros">
       <div class="footer-logo">AURA.</div>
-      <p style="max-width: 500px; margin: 0 auto 2rem; color: #d1d5db">
-        Creando las mejores prendas básicas desde 2026. Nos enfocamos en la
-        sostenibilidad, calidad de materiales y diseños atemporales.
+      <p style="max-width: 500px; margin: 0 auto 2rem; color: var(--text-dark)">
+        Elevando lo cotidiano. Diseñado con precisión, fabricado con conciencia.
       </p>
       <div class="social-links">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
       </div>
       <div class="footer-bottom">
         &copy; 2026 Aura Premium Tees. Todos los derechos reservados.
       </div>
     </footer>
 
-    <!-- Toast Container -->
-    <div id="toast" class="toast">
-      <i
-        class="fas fa-check-circle"
-        style="color: #4ade80; font-size: 1.2rem"
-      ></i>
-      <span id="toast-message">Producto añadido</span>
+    <!-- Off-Canvas Cart Backdrop -->
+    <div class="cart-backdrop" id="cart-backdrop" onclick="toggleCart()"></div>
+
+    <!-- Off-Canvas Cart Panel -->
+    <div class="cart-panel" id="cart-panel">
+      <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <button class="close-cart" onclick="toggleCart()" aria-label="Cerrar carrito"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be injected here -->
+        <div class="empty-cart-msg" id="empty-cart-msg">Tu carrito está vacío</div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <span id="cart-total-price">$0.00</span>
+        </div>
+        <button class="btn btn-primary checkout-btn" onclick="alert('Funcionalidad de Checkout en desarrollo.')">
+          Checkout Seguro
+        </button>
+      </div>
     </div>
 
     <!-- Scripts -->
     <script>
-      let cartCount = 0;
-      let cartTotal = 0;
-      let toastTimeout;
+      let cart = [];
 
-      // Navbar scroll effect
+      // Update cart UI
+      function updateCartUI() {
+        const countElement = document.getElementById("cart-count");
+        const cartItemsContainer = document.getElementById("cart-items");
+        const emptyMsg = document.getElementById("empty-cart-msg");
+        const totalPriceElement = document.getElementById("cart-total-price");
+
+        // Update count badge
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        countElement.innerText = totalItems;
+        
+        // Trigger badge animation
+        countElement.classList.remove("animate-pop");
+        void countElement.offsetWidth;
+        countElement.classList.add("animate-pop");
+
+        // Update total price
+        const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        totalPriceElement.innerText = `$${totalPrice.toFixed(2)}`;
+
+        // Render items
+        cartItemsContainer.innerHTML = "";
+        if (cart.length === 0) {
+          cartItemsContainer.appendChild(emptyMsg);
+          emptyMsg.style.display = "block";
+        } else {
+          emptyMsg.style.display = "none";
+          cart.forEach((item, index) => {
+            const itemElement = document.createElement("div");
+            itemElement.className = "cart-item";
+            itemElement.innerHTML = `
+              <div class="cart-item-details">
+                <div class="cart-item-title">${item.name}</div>
+                <div class="cart-item-size">Talla: ${item.size}</div>
+                <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>
+              </div>
+              <button class="remove-item" onclick="removeFromCart(${index})" aria-label="Eliminar producto"><i class="fas fa-trash"></i></button>
+            `;
+            cartItemsContainer.appendChild(itemElement);
+          });
+        }
+      }
+
+      // Add to cart functionality
+      function addToCart(productName, size, price) {
+        const existingItem = cart.find(item => item.name === productName && item.size === size);
+        if (existingItem) {
+          existingItem.quantity++;
+        } else {
+          cart.push({ name: productName, size: size, price: price, quantity: 1 });
+        }
+        
+        updateCartUI();
+        
+        // Open cart automatically when adding item
+        const cartPanel = document.getElementById("cart-panel");
+        if (!cartPanel.classList.contains("open")) {
+          toggleCart();
+        }
+      }
+
+      // Remove from cart
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCartUI();
+      }
+
+      // Toggle Off-Canvas Cart
+      function toggleCart() {
+        const cartPanel = document.getElementById("cart-panel");
+        const backdrop = document.getElementById("cart-backdrop");
+        const body = document.body;
+
+        if (cartPanel.classList.contains("open")) {
+          cartPanel.classList.remove("open");
+          backdrop.classList.remove("show");
+          body.style.overflow = ""; // restore scroll
+        } else {
+          cartPanel.classList.add("open");
+          backdrop.classList.add("show");
+          body.style.overflow = "hidden"; // prevent background scroll
+        }
+      }
+
+      // Navbar Glassmorphism effect on scroll
       window.addEventListener("scroll", () => {
         const nav = document.getElementById("navbar");
         if (window.scrollY > 50) {
-          nav.style.padding = "1rem 5%";
-          nav.style.boxShadow = "0 5px 20px rgba(0,0,0,0.1)";
+          nav.classList.add("scrolled");
         } else {
-          nav.style.padding = "1.5rem 5%";
-          nav.style.boxShadow = "0 2px 15px rgba(0,0,0,0.05)";
+          nav.classList.remove("scrolled");
         }
       });
 
-      // Add to cart functionality
-      function addToCart(productName, price) {
-        cartCount++;
-        cartTotal += price;
+      // Intersection Observer for Scroll Animations (fade-in-up)
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.15
+        };
 
-        const countElement = document.getElementById("cart-count");
-        countElement.innerText = cartCount;
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
 
-        // Trigger animation
-        countElement.classList.remove("animate-pop");
-        void countElement.offsetWidth; // trigger reflow
-        countElement.classList.add("animate-pop");
+        document.querySelectorAll(".animate-on-scroll").forEach(el => {
+          observer.observe(el);
+        });
 
-        showToast(`¡${productName} añadida!`);
-      }
+        // Magnetic Button Effect
+        const magneticBtns = document.querySelectorAll(".magnetic-btn");
+        magneticBtns.forEach(btn => {
+          btn.addEventListener("mousemove", (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+          });
+          btn.addEventListener("mouseleave", () => {
+            btn.style.transform = "translate(0px, 0px)";
+          });
+        });
+      });
 
-      // Show toast notification
-      function showToast(message) {
-        const toast = document.getElementById("toast");
-        const toastMsg = document.getElementById("toast-message");
-
-        toastMsg.innerText = message;
-        toast.classList.add("show");
-
-        if (toastTimeout) {
-          clearTimeout(toastTimeout);
-        }
-
-        toastTimeout = setTimeout(() => {
-          toast.classList.remove("show");
-        }, 3000);
-      }
-
-      // Click on cart icon
-      function toggleCart() {
-        if (cartCount === 0) {
-          showToast("Tu carrito está vacío 🛒");
-        } else {
-          showToast(
-            `Total: $${cartTotal.toFixed(2)} (${cartCount} prendas) 🛒`,
-          );
-        }
+      // Change Product Color (Swatches)
+      function changeProductColor(primaryId, secondaryId, primarySrc, secondarySrc, filter = '') {
+        const prim = document.getElementById(primaryId);
+        prim.src = primarySrc;
+        prim.style.filter = filter;
+        document.getElementById(secondaryId).src = secondarySrc;
       }
     </script>
   </body>
